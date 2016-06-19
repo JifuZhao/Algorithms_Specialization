@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<!-- saved from url=(0076)https://class.coursera.org/algs4partII-007/quiz/feedback?submission_id=95233 -->
+<html xmlns:fb="http://ogp.me/ns/fb#" itemtype="http://schema.org" class="supports-svg"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=IE7"><meta name="fragment" content="!"><meta name="robots" content="NOODP"><meta property="og:title" content="Coursera"><meta property="og:type" content="website"><meta property="og:image" content="http://s3.amazonaws.com/coursera/media/Coursera_Computer_Narrow.png"><meta property="og:url" content="https://www.coursera.org/quiz/feedback?submission_id=95233"><meta property="og:site_name" content="Coursera"><meta property="og:locale" content="en_US"><meta property="og:description" content="Take free online classes from 80+ top universities and organizations. Coursera is a social entrepreneurship company partnering with Stanford University, Yale University, Princeton University and others around the world to offer courses online for anyone to take, for free. We believe in connecting people to a great education so that anyone around the world can learn without limits."><meta property="fb:admins" content="727836538,4807654"><meta property="fb:app_id" content="274998519252278"><meta name="twitter:site" content="Coursera"><meta name="twitter:app:name:iphone" content="Coursera"><meta name="twitter:app:name:ipad" content="Coursera"><meta name="twitter:app:name:googleplay" content="Coursera"><meta name="twitter:app:id:iphone" content="id736535961"><meta name="twitter:app:id:ipad" content="id736535961"><meta name="twitter:app:id:googleplay" content="org.coursera.android"><meta name="description" content="Take free online classes from 80+ top universities and organizations. Coursera is a social entrepreneurship company partnering with Stanford University, Yale University, Princeton University and others around the world to offer courses online for anyone to take, for free. We believe in connecting people to a great education so that anyone around the world can learn without limits."><meta name="image" content="http://s3.amazonaws.com/coursera/media/Coursera_Computer_Narrow.png"><meta name="apple-itunes-app" content="app-id=736535961"><title>Coursera</title>    <link href="./final_exam_files/spark.main.css" rel="stylesheet" type="text/css">
+      <link href="./final_exam_files/course.css" rel="stylesheet" type="text/css">
+    <link href="https://spark-public.s3.amazonaws.com/algs4partII/static/images/favicon.ico" rel="icon">
+<script type="text/javascript" async="" src="./final_exam_files/ga.js"></script><script type="text/javascript" src="./final_exam_files/MathJax.js"></script><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pages/spark/routes" src="./final_exam_files/routes.js"></script><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuTitle {background-color: #CCCCCC; margin: -1px -1px 1px -1px; text-align: center; font-style: italic; font-size: 80%; color: #444444; padding: 2px 0; overflow: hidden}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Coursera"><meta name="twitter:description" content="Take free online classes from 80+ top universities and organizations. Coursera is a social entrepreneurship company partnering with Stanford University, Yale University, Princeton University and others around the world to offer courses online for anyone to take, for free. We believe in connecting people to a great education so that anyone around the world can learn without limits."><meta name="twitter:image:src" content="http://s3.amazonaws.com/coursera/media/Coursera_Computer_Narrow.png"><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="js/lib/204" src="./final_exam_files/204.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="js/lib/400" src="./final_exam_files/400.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pages/spark/views/template/student-page" src="./final_exam_files/student-page.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="spark/app/signature/js/launch_iframe_phplauncher" src="./final_exam_files/launch_iframe_phplauncher.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="spark/app/signature/js/please_complete_st_phplauncher" src="./final_exam_files/please_complete_st_phplauncher.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="spark/app/signature/js/doing_well_phplauncher" src="./final_exam_files/doing_well_phplauncher.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="spark/app/signature/js/launch_iframe" src="./final_exam_files/launch_iframe.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pages/spark/views/template/student-page.html" src="./final_exam_files/student-page.html.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="bundles/assess/assessmentTypes/sparkSurveyQuestions/sparkSurveyQuestionsSessionModel" src="./final_exam_files/sparkSurveyQuestionsSessionModel.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="spark/app/signature/js/general_sigtrack_modal" src="./final_exam_files/general_sigtrack_modal.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="js/lib/util" src="./final_exam_files/util.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="bundles/assess/assessmentTypes/quickQuestions/sessionModel" src="./final_exam_files/sessionModel.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="bundles/assess/assessmentTypes/SessionModel" src="./final_exam_files/sessionModel(1).js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="bundles/assess/framework/QuestionCollection" src="./final_exam_files/QuestionCollection.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="bundles/assess/framework/QuestionModel" src="./final_exam_files/QuestionModel.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="bundles/assess/lib/backbone.hascollections" src="./final_exam_files/backbone.hascollections.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="js/lib/underscore.extend" src="./final_exam_files/underscore.extend.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pages/spark/views/template/nls/student-page" src="./final_exam_files/student-page(1).js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pages/spark/views/template/header" src="./final_exam_files/header.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pages/spark/views/template/sidebar" src="./final_exam_files/sidebar.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="js/lib/readme" src="./final_exam_files/readme.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pages/spark/views/template/header.html" src="./final_exam_files/header.html.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pages/analytics/models/LearnerStoriesCollection" src="./final_exam_files/LearnerStoriesCollection.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pages/spark-survey/assessApi" src="./final_exam_files/assessApi.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pages/spark/views/template/sidebar.html" src="./final_exam_files/sidebar.html.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="spark/app/signature/js/signature_track" src="./final_exam_files/signature_track.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pages/analytics/models/LearnerStoryModel" src="./final_exam_files/LearnerStoryModel.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="spark/app/signature/js/signatureTrackLastChanceModal.html" src="./final_exam_files/signatureTrackLastChanceModal.html.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="spark/app/signature/js/flexjoinLastChanceModal.html" src="./final_exam_files/flexjoinLastChanceModal.html.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="js/lib/path" src="./final_exam_files/path.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pages/spark/views/template/nls/header" src="./final_exam_files/header(1).js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pages/spark/views/template/nls/sidebar" src="./final_exam_files/sidebar(1).js"></script></head><body><div id="MathJax_Message" style="display: none;"></div><div id="fb-root"></div><div id="spark-help" class="hide"></div><a href="https://learner.coursera.help/hc/requests/new" target="_blank"><div style="z-index: 1" data-networkprioritysupportwidget="" role="button" class="helpwidget-tab hide">Premium Support</div></a><!-- - track IE8 and less browser for eventing purposes--><!--[if lte IE 8]><script>window._204 = window._204 || [];
+window._gaq = window._gaq || [];
+window._gaq.push(
+    ['_setAccount', 'UA-28377374-1'],
+    ['_setDomainName', window.location.hostname],
+    ['_setAllowLinker', true],
+    ['_trackPageview', window.location.pathname]);
+window._204.push(
+  ['client', 'home'],
+  {key:"pageview", value:window.location.pathname});</script><script src="https://dw0ugk4msqulk.cloudfront.net/61a7c1335d196f1295e3341330ed120d255fe89d/js/lib/204.js"></script><script src="https://ssl.google-analytics.com/ga.js"></script><![endif]--><div id="fb-root"></div><div id="origami" data-js="origami"><div><div><div class="coursera-page"><div role="menubar" class="coursera-header"><div class="hidden">This page features MathJax technology to render mathematical formulae.
+If you are using a screen reader, please visit <a href="http://www.dessci.com/en/products/mathplayer/">MathPlayer</a> to download the plugin for your browser. Please note that this is an Internet Explorer-only plugin at this time.</div><h1 class="hidden">Algorithms, Part II</h1><!-- UNTIL dashboard announcement expires 2014-12-01 (then delete this code)--><div class="helpcenter-announcement"><div data-readme="helpcenter-announcement" data-readme-show-count="1" data-readme-show-until-closed="data-readme-show-until-closed" data-readme-expires="Mar 31, 2015" class="readme" style="visibility: visible; display: none;"><div>Need technical help? Visit our new&nbsp;<a href="https://learner.coursera.help/" data-readme-close="data-readme-close">Learner Help Center!</a></div><div data-readme-close="data-readme-close" class="readme-close-icon"><span class="icon-remove"></span></div></div></div><div role="banner" class="course-topbar container-fluid"><div class="row-fluid"><div class="span3"><a href="https://www.coursera.org/" data-if-linkable="add-referrer" class="course-topbar-logo"></a></div><div style="float:right;" class="course-topbar-nav-container span9"><h2 class="hidden">Top Navigation Bar</h2><ul class="course-topbar-nav-list"><li class="course-topbar-nav-list-item"><a href="https://www.coursera.org/courses" data-if-linkable="add-referrer">Courses</a></li><li tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" aria-owns="course-topbar-my" data-popup="#course-topbar-my" data-popup-bind-open="mouseenter" data-popup-close="data-popup-close" style="cursor:pointer;" data-popup-direction="se" class="course-topbar-nav-list-item"><a data-user-id="8379441">Jifu Zhao<i class="icon-caret-down"></i></a></li></ul></div></div><div id="course-topbar-aboutus" class="course-topbar-sublist"><a href="https://www.coursera.org//about/" target="_new" data-if-linkable="add-referrer" class="internal-about course-topbar-sublist-item">About Us</a><a href="https://www.coursera.org//about/careers" target="_new" data-if-linkable="add-referrer" class="internal-about course-topbar-sublist-item">Careers</a><a href="https://www.coursera.org//about/people" target="_new" data-if-linkable="add-referrer" class="internal-about course-topbar-sublist-item">People</a><a href="https://www.coursera.org//about/contact" target="_new" data-if-linkable="add-referrer" class="internal-about course-topbar-sublist-item">Contact Us</a></div><div id="course-topbar-my" class="course-topbar-sublist"><a data-popup-close="data-popup-close" href="https://www.coursera.org/" target="_new" class="course-topbar-sublist-item">My Courses</a><a data-popup-close="data-popup-close" href="https://www.coursera.org/account/profile" target="_new" class="course-topbar-sublist-item">Profile</a><a data-popup-close="data-popup-close" href="https://www.coursera.org/account/accomplishments" target="_new" class="course-topbar-sublist-item">Course Records</a><a href="https://www.coursera.org/account/settings" target="_new" class="course-topbar-sublist-item">Settings</a><a href="https://class.coursera.org/algs4partII-007/class/preferences" class="course-topbar-sublist-item">Course Preferences</a><form action="https://class.coursera.org/api/logoutSsr/v1?csrf3-token=1466547468.MSu7Y8icIxbMD2Bs" method="post"><button data-popup-close="data-popup-close" type="submit" class="course-topbar-sublist-item">Sign Out</button></form></div></div><div class="course-topbanner-wrapper"><div class="course-topbanner"><div class="course-topbanner-university-logo"><a href="https://www.coursera.org/princeton" target="_blank" data-if-linkable="add-referrer" title="https://www.coursera.org/princeton" class="coursera-university-color"><img src="./final_exam_files/university_logo" alt="princeton"></a></div><h1 class="course-topbanner-header"><a href="https://class.coursera.org/algs4partII-007/" data-if-linkable="modal-lock" class="course-topbanner-name coursera-university-color">Algorithms, Part II</a><br><span style="" class="course-topbanner-instructor">by Kevin Wayne, Robert Sedgewick</span></h1></div></div></div><div style="position:relative;" class="container-fluid"><div class="row-fluid"><div id="course-page-sidebar" role="navigation"><div role="menubar" class="coursera-sidebar"><div id="course-page-sidebar" role="navigation"><div class="course-navbar-container"><a href="https://class.coursera.org/algs4partII-007" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_index"><img src="./final_exam_files/logo" style="width: 205px;height: 116px;margin: -15px 0px 8px 1px; box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);" alt="Course Home Page"></a><div data-coursera-course-search-nav-widget="data-coursera-course-search-nav-widget" class="input-append course-search-nav-box"><form method="get" action="https://class.coursera.org/algs4partII-007/class/search" data-js-search-form="data-js-search-form" class="form-inline minimized-search"><label for="course-search-nav-input" class="accessible-text-for-reader">Search this course</label><input id="course-search-nav-input" type="text" name="q" data-js-search-input="data-js-search-input">&nbsp;<button type="submit" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="search" class="btn icon-search"><span class="accessible-text-for-reader">Search</span></button></form></div><h2 class="hidden">Side Navigation Bar</h2><ul class="course-navbar-list"><li class="course-navbar-item in-class-qqs-tab"><a href="https://class.coursera.org/algs4partII-007/questions" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_" class="coursera-university-color"><span>Quick Questions</span><span></span><span class="in-class-qqs-number-display">15</span></a><div class="in-class-qqs-announcement"><div data-readme="in-class-qqs-announcement-algs4partII-007" data-readme-show-count="1" data-readme-show-until-closed="data-readme-show-until-closed" data-readme-type="custom" class="readme"><div class="arrow-left"></div><div class="readme-content"><span>Please help us improve this course by answering some quick questions!</span></div><div data-readme-close="data-readme-close" class="readme-close-icon"><span class="icon-remove"></span></div></div></div></li><li class="course-navbar-item in-class-qqs-tab"></li><li class="course-navbar-item"><a href="https://class.coursera.org/algs4partII-007/class/index" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Home" class="coursera-university-color"><span>Home </span><span></span></a></li><li class="course-navbar-item"><a href="https://class.coursera.org/algs4partII-007/wiki/view?page=syllabus" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Syllabus" class="coursera-university-color"><span>Syllabus </span><span></span></a></li><li class="course-navbar-item"><a href="https://class.coursera.org/algs4partII-007/wiki/view?page=schedule" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Schedule" class="coursera-university-color"><span>Schedule </span><span></span></a></li><li class="course-navbar-item"></li><li class="course-navbar-item"><a href="https://class.coursera.org/algs4partII-007/lecture/index" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Lectures" class="coursera-university-color"><span>Lectures </span><span></span></a></li><li class="course-navbar-item"><a href="https://class.coursera.org/algs4partII-007/quiz/index" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Exercises" class="coursera-university-color"><span>Exercises </span><span></span></a></li><li class="course-navbar-item"><a href="https://class.coursera.org/algs4partII-007/assignment/index" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Programming_Assignments" class="coursera-university-color"><span>Programming Assignments </span><span></span></a></li><li class="course-navbar-item"><a href="https://class.coursera.org/algs4partII-007/quiz/index?quiz_type=homework" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Job_Interview_Questions" class="coursera-university-color"><span>Job Interview Questions </span><span></span></a></li><li class="course-navbar-item"></li><li class="course-navbar-item"><a href="https://class.coursera.org/algs4partII-007/forum/index" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Discussion_Forums" class="coursera-university-color"><span>Discussion Forums </span><span></span></a></li><li class="course-navbar-item"><a href="https://class.coursera.org/algs4partII-007/wiki/ScheduleGoogleHangouts" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Google+_Hangouts" class="coursera-university-color"><span>Google+ Hangouts </span><span></span></a></li><li class="course-navbar-item"><a href="https://class.coursera.org/algs4partII-007/wiki/view?page=errata" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Errata" class="coursera-university-color"><span>Errata </span><span></span></a></li><li class="course-navbar-item"><a href="https://class.coursera.org/algs4partII-007/quiz/index?quiz_type=survey" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Surveys" class="coursera-university-color"><span>Surveys </span><span></span></a></li><li class="course-navbar-item"></li><li class="course-navbar-item"><a href="http://algs4.cs.princeton.edu/" target="_blank" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Booksite" class="coursera-university-color"><span>Booksite </span><span class="icon-share"></span><span class="accessible-text-for-reader">opens in new browser tab</span></a></li></ul><ul style="list-style-type:none;margin-left: 10px;"><li><a href="https://accounts.coursera.org/i/zendesk/courserahelp?return_to=https://learner.coursera.help/hc/" target="_blank" title="Open help articles in new window" class="coursera-university-color"><i class="icon-question-sign"></i>Help Center</a></li></ul><ul style="list-style-type:none;margin-left: 10px;"></ul></div></div></div></div><div id="course-page-content" role="main"><div id="spark" class="hide" style="display: block;">
+
+<h2 class="course-page-header">
+  <span>
+Feedback — Final Exam Part II  </span>
+  
+  <a class="coursera-reporter-link" title="Click here if you&#39;re experiencing technical problems or found errors in the course materials." target="_blank" href="https://accounts.coursera.org/i/zendesk/courserahelp?return_to=https://learner.coursera.help/hc/articles/201523125-Quizzes">
+     Help Center
+  </a>
+</h2>
+
+
+<a data-coursera-admin-helpwidget-link="" rel="help" href="https://class.coursera.org/mooc/help/quiz" title="Quiz documentation" style="display:none;">Learn more</a>
+
+
+
+
+
+
+
+<p class="course-quiz-feedback"> You submitted this quiz on <strong>Fri 17 Jun 2016  7:12 AM PDT</strong>. You got a score of <strong>3.20</strong> out of <strong>11.00</strong>. However, you will not get credit for it, since it was submitted past the deadline. </p>
+
+
+            <form method="post" id="quiz_form" accept-charset="UTF-8">
+    
+        <div class="course-quiz-preamble">
+        <div style="font-family:monospace"><pre>To specify an array or sequence of values in an answer, separate the values in<br>the sequence by whitespace. For example, if the question asks for the first<br>ten powers of two (starting at 1), then the following answer is acceptable:<br><br>     1 2 4 8 16 32 64 128 256 512<br><br>If you wish to discuss a particular question and answer in the forums, please<br>post the entire question and answer, including the seed (which can be used by<br>the course staff to uniquely identify the question) and the explanation (which<br>contains the correct answer).</pre></div>    </div>
+    
+    
+    <div class="course-quiz-question-body">
+<h3 class="course-quiz-question-number">Question 1</h3>
+<div dir="auto" class="course-quiz-question-text">
+<div style="font-family:monospace"><pre>(seed = 450432)<br>Which of the following statements about connectivity in an undirected graph are true? Check all that apply.</pre></div>
+</div>
+<div dir="auto" class="course-quiz-options"></div>
+<table class="table">
+<tbody><tr>
+<th>Your Answer</th>
+<th></th>
+<th>Score</th>
+<th>Explanation</th>
+</tr>
+<tr data-randomizable-option="data-randomizable-option">
+<td class="course-quiz-student-answer" dir="auto">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[Question 38][]" id="gensym_5764053b5c7c6" value="Option 190" disabled=""><div style="font-family:monospace"><pre>If u is connected to v and v is connected to w, then u is connected to w.</pre></div>
+</td>
+<td><span class="course-quiz-answer-incorrect" title="Incorrect" alt="Incorrect"><span class="icon-remove" alt="Incorrect"><span class="accessible-text-for-reader">Inorrect</span></span></span></td>
+<td>0.00</td>
+<td></td>
+</tr>
+<tr data-randomizable-option="data-randomizable-option">
+<td class="course-quiz-student-answer" dir="auto">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[Question 38][]" id="gensym_5764053b5cfe3" value="Option 191" disabled=""><div style="font-family:monospace"><pre>Any acyclic graph with V - 1 edges is a tree.</pre></div>
+</td>
+<td><span class="course-quiz-answer-incorrect" title="Incorrect" alt="Incorrect"><span class="icon-remove" alt="Incorrect"><span class="accessible-text-for-reader">Inorrect</span></span></span></td>
+<td>0.00</td>
+<td></td>
+</tr>
+<tr data-randomizable-option="data-randomizable-option">
+<td class="course-quiz-student-answer" dir="auto">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[Question 38][]" id="gensym_5764053b5d7ec" value="Option 192" disabled=""><div style="font-family:monospace"><pre>Removing any one edge from a connected graph breaks the graph into exactly two connected components.</pre></div>
+</td>
+<td><span class="course-quiz-answer-correct" title="Correct" alt="Correct"><span class="icon-ok" alt="Correct"><span class="accessible-text-for-reader">Correct</span></span></span></td>
+<td>0.20</td>
+<td></td>
+</tr>
+<tr data-randomizable-option="data-randomizable-option">
+<td class="course-quiz-student-answer" dir="auto">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[Question 38][]" id="gensym_5764053b5dfcc" value="Option 193" disabled=""><div style="font-family:monospace"><pre>Every acyclic graph has at most V - 1 edges.</pre></div>
+</td>
+<td><span class="course-quiz-answer-incorrect" title="Incorrect" alt="Incorrect"><span class="icon-remove" alt="Incorrect"><span class="accessible-text-for-reader">Inorrect</span></span></span></td>
+<td>0.00</td>
+<td></td>
+</tr>
+<tr data-randomizable-option="data-randomizable-option">
+<td class="course-quiz-student-answer" dir="auto">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[Question 38][]" id="gensym_5764053b5e7b8" value="Option 194" disabled=""><div style="font-family:monospace"><pre>An acyclic graph is connected if and only if it has V-1 edges.</pre></div>
+</td>
+<td><span class="course-quiz-answer-incorrect" title="Incorrect" alt="Incorrect"><span class="icon-remove" alt="Incorrect"><span class="accessible-text-for-reader">Inorrect</span></span></span></td>
+<td>0.00</td>
+<td></td>
+</tr>
+<tr>
+<td>Total</td>
+<td></td>
+<td>0.20 / 1.00</td>
+<td></td>
+</tr>
+</tbody></table>
+<div dir="auto" class="course-quiz-question-explanation">
+<b>Question Explanation<br><br></b><div style="font-family:monospace"><pre></pre></div>
+</div>
+</div><div class="course-quiz-question-body">
+<h3 class="course-quiz-question-number">Question 2</h3>
+<div dir="auto" class="course-quiz-question-text">
+<div style="font-family:monospace"><pre>(seed = 462340)<br>Which of the following statements about depth-first search in a digraph are guaranteed to be true? Check all that apply.</pre></div>
+</div>
+<div dir="auto" class="course-quiz-options"></div>
+<table class="table">
+<tbody><tr>
+<th>Your Answer</th>
+<th></th>
+<th>Score</th>
+<th>Explanation</th>
+</tr>
+<tr data-randomizable-option="data-randomizable-option">
+<td class="course-quiz-student-answer" dir="auto">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[Question 175][]" id="gensym_5764053b61792" value="Option 875" disabled=""><div style="font-family:monospace"><pre>If there is a unique vertex reachable from every other vertex, it will be first in some postorder.</pre></div>
+</td>
+<td><span class="course-quiz-answer-incorrect" title="Incorrect" alt="Incorrect"><span class="icon-remove" alt="Incorrect"><span class="accessible-text-for-reader">Inorrect</span></span></span></td>
+<td>0.00</td>
+<td></td>
+</tr>
+<tr data-randomizable-option="data-randomizable-option">
+<td class="course-quiz-student-answer" dir="auto">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[Question 175][]" id="gensym_5764053b62029" value="Option 876" disabled=""><div style="font-family:monospace"><pre>If there is a unique vertex reachable from every other vertex, it will be first in any postorder.</pre></div>
+</td>
+<td><span class="course-quiz-answer-correct" title="Correct" alt="Correct"><span class="icon-ok" alt="Correct"><span class="accessible-text-for-reader">Correct</span></span></span></td>
+<td>0.20</td>
+<td></td>
+</tr>
+<tr data-randomizable-option="data-randomizable-option">
+<td class="course-quiz-student-answer" dir="auto">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[Question 175][]" id="gensym_5764053b6285a" value="Option 877" disabled=""><div style="font-family:monospace"><pre>Suppose that dfs(v) is called after dfs(w) is called but before dfs(w) returns. Then, there is a directed path from v to w.</pre></div>
+</td>
+<td><span class="course-quiz-answer-correct" title="Correct" alt="Correct"><span class="icon-ok" alt="Correct"><span class="accessible-text-for-reader">Correct</span></span></span></td>
+<td>0.20</td>
+<td></td>
+</tr>
+<tr data-randomizable-option="data-randomizable-option">
+<td class="course-quiz-student-answer" dir="auto">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[Question 175][]" id="gensym_5764053b63050" value="Option 878" disabled=""><div style="font-family:monospace"><pre>The postorder of a digraph is the reverse of its preorder.</pre></div>
+</td>
+<td><span class="course-quiz-answer-correct" title="Correct" alt="Correct"><span class="icon-ok" alt="Correct"><span class="accessible-text-for-reader">Correct</span></span></span></td>
+<td>0.20</td>
+<td></td>
+</tr>
+<tr data-randomizable-option="data-randomizable-option">
+<td class="course-quiz-student-answer" dir="auto">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[Question 175][]" id="gensym_5764053b63ace" value="Option 879" disabled=""><div style="font-family:monospace"><pre>Suppose that dfs(v) is called after dfs(w) is called but before dfs(w) returns. Then, there is a directed path from w to v.</pre></div>
+</td>
+<td><span class="course-quiz-answer-incorrect" title="Incorrect" alt="Incorrect"><span class="icon-remove" alt="Incorrect"><span class="accessible-text-for-reader">Inorrect</span></span></span></td>
+<td>0.00</td>
+<td></td>
+</tr>
+<tr>
+<td>Total</td>
+<td></td>
+<td>0.60 / 1.00</td>
+<td></td>
+</tr>
+</tbody></table>
+<div dir="auto" class="course-quiz-question-explanation">
+<b>Question Explanation<br><br></b><div style="font-family:monospace"><pre></pre></div>
+</div>
+</div><div class="course-quiz-question-body">
+<h3 class="course-quiz-question-number">Question 3</h3>
+<div dir="auto" class="course-quiz-question-text">
+<div style="font-family:monospace"><pre>(seed = 506490)<br>Which of the following statements about minimum spanning trees (MSTs) are guaranteed to be true in any edge-weighted graph G? Assume that G is connected and has no parallel edge or self-loops. Do not assume the edge weights are distinct unless this is specifically stated. Check all that apply.</pre></div>
+</div>
+<div dir="auto" class="course-quiz-options"></div>
+<table class="table">
+<tbody><tr>
+<th>Your Answer</th>
+<th></th>
+<th>Score</th>
+<th>Explanation</th>
+</tr>
+<tr data-randomizable-option="data-randomizable-option">
+<td class="course-quiz-student-answer" dir="auto">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[Question 393][]" id="gensym_5764053b66378" value="Option 1965" disabled=""><div style="font-family:monospace"><pre>Let G be an edge-weighted graph with positive edge weights. Then, T is a MST of G if and only if it is a minimum weight connected subgraph of G that connects all of the vertices.</pre></div>
+</td>
+<td><span class="course-quiz-answer-incorrect" title="Incorrect" alt="Incorrect"><span class="icon-remove" alt="Incorrect"><span class="accessible-text-for-reader">Inorrect</span></span></span></td>
+<td>0.00</td>
+<td>Any minimum weight subgraph of G that connects all of the vertices must be a tree: if it had a cycle, then deleting any edge in the cycle would yield a lighter subgraph (without disconnecting it).</td>
+</tr>
+<tr data-randomizable-option="data-randomizable-option">
+<td class="course-quiz-student-answer" dir="auto">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[Question 393][]" id="gensym_5764053b66b75" value="Option 1966" disabled=""><div style="font-family:monospace"><pre>Assume that the edge weights in G are distinct and that G contains at least V edges. Let T be the unique MST. Then the second-best MST (a lightest spanning tree among spanning trees other than T) is unique.</pre></div>
+</td>
+<td><span class="course-quiz-answer-correct" title="Correct" alt="Correct"><span class="icon-ok" alt="Correct"><span class="accessible-text-for-reader">Correct</span></span></span></td>
+<td>0.20</td>
+<td>Consider an edge-weighted graph with these edges and capacities: v-w (1), v-x (3), v-z (4), w-x (2), w-z (5). Then, the MST is { v-w, v-z, w-x }. There are two second-best MSTs: T' = { v-w, v-x, v-z } and T'' = { v-w, w-x, w-z }.</td>
+</tr>
+<tr data-randomizable-option="data-randomizable-option">
+<td class="course-quiz-student-answer" dir="auto">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[Question 393][]" id="gensym_5764053b67426" value="Option 1967" disabled=""><div style="font-family:monospace"><pre>Assume that the edge weights in G are distinct. If the heaviest edge e is in the MST T, then e is a cut edge (i.e., deleting edge e from G disconnects the graph).</pre></div>
+</td>
+<td><span class="course-quiz-answer-incorrect" title="Incorrect" alt="Incorrect"><span class="icon-remove" alt="Incorrect"><span class="accessible-text-for-reader">Inorrect</span></span></span></td>
+<td>0.00</td>
+<td>Consider the cut (A, B) defined by deleting the heaviest edge e from the MST T. Assume (for the sake of contradiction) that e is not a cut edge. Then, there is another edge f in G that crosses the cut. Thus, replacing edge f with edge e in T results in a lighter spanning tree (a contradiction).</td>
+</tr>
+<tr data-randomizable-option="data-randomizable-option">
+<td class="course-quiz-student-answer" dir="auto">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[Question 393][]" id="gensym_5764053b67c14" value="Option 1968" disabled=""><div style="font-family:monospace"><pre>Assume that the edge weights in G are distinct. Then, G has a unique MST.</pre></div>
+</td>
+<td><span class="course-quiz-answer-incorrect" title="Incorrect" alt="Incorrect"><span class="icon-remove" alt="Incorrect"><span class="accessible-text-for-reader">Inorrect</span></span></span></td>
+<td>0.00</td>
+<td>This was asserted in lecture without proof. To see why it's true, suppose (for the sake of contradiction) that G has two different MSTs T and T'. Let e be the min weight edge of G that is in exactly one of T or T'. Without loss of generality, assume e is in T. Adding e to T' creates a cycle C. There is at least one edge, say f, in C that is not in T (otherwise T would be cyclic). By our choice of e, w(e) ≤ w(f). Since all of the edge weights are distinct, w(e) &lt; w(f). Now, replacing edge f with edge e in T' yields a lighter spanning tree (a contradiction).</td>
+</tr>
+<tr data-randomizable-option="data-randomizable-option">
+<td class="course-quiz-student-answer" dir="auto">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[Question 393][]" id="gensym_5764053b68428" value="Option 1969" disabled=""><div style="font-family:monospace"><pre>Assume that the edge weights in G are distinct. Let (A, B) be a cut. Suppose that edge e is not the lightest edge that crosses (A, B). Then, edge e is not in the MST.</pre></div>
+</td>
+<td><span class="course-quiz-answer-correct" title="Correct" alt="Correct"><span class="icon-ok" alt="Correct"><span class="accessible-text-for-reader">Correct</span></span></span></td>
+<td>0.20</td>
+<td>The cut property asserts that the lightest edge crossing the cut (A, B) is in the MST, but there may be other crossing edges in the MST. For example, consider an edge-weighted graph with these edges and capacities: v-w (1), w-x (3), x-v (2). Let A = { v } and B = { w, x }. Then, x-v is not the lightest edge that crosses (A, B) but it is in the MST.</td>
+</tr>
+<tr>
+<td>Total</td>
+<td></td>
+<td>0.40 / 1.00</td>
+<td></td>
+</tr>
+</tbody></table>
+<div dir="auto" class="course-quiz-question-explanation">
+<b>Question Explanation<br><br></b><div style="font-family:monospace"><pre></pre></div>
+</div>
+</div><div class="course-quiz-question-body">
+<h3 class="course-quiz-question-number">Question 4</h3>
+<div dir="auto" class="course-quiz-question-text">
+<div style="font-family:monospace"><pre>(seed = 238180)<br>Which of the following statements about shortest paths are true? Check all that apply.</pre></div>
+</div>
+<div dir="auto" class="course-quiz-options"></div>
+<table class="table">
+<tbody><tr>
+<th>Your Answer</th>
+<th></th>
+<th>Score</th>
+<th>Explanation</th>
+</tr>
+<tr data-randomizable-option="data-randomizable-option">
+<td class="course-quiz-student-answer" dir="auto">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[Question 597][]" id="gensym_5764053b6af91" value="Option 2985" disabled=""><div style="font-family:monospace"><pre>Let G be a digraph with positive edge weights. Suppose that you remove an edge with weight x. Then, the length of the shortest path from s to t can increase by more than x.</pre></div>
+</td>
+<td><span class="course-quiz-answer-incorrect" title="Incorrect" alt="Incorrect"><span class="icon-remove" alt="Incorrect"><span class="accessible-text-for-reader">Inorrect</span></span></span></td>
+<td>0.00</td>
+<td></td>
+</tr>
+<tr data-randomizable-option="data-randomizable-option">
+<td class="course-quiz-student-answer" dir="auto">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[Question 597][]" id="gensym_5764053b6ba77" value="Option 2986" disabled=""><div style="font-family:monospace"><pre>Let P be a shortest path from some s to t in an edge-weighted digraph G. If the weight of each edge in G is multiplied by 17, then P will still be a shortest path from s to t in the modified digraph G'.</pre></div>
+</td>
+<td><span class="course-quiz-answer-incorrect" title="Incorrect" alt="Incorrect"><span class="icon-remove" alt="Incorrect"><span class="accessible-text-for-reader">Inorrect</span></span></span></td>
+<td>0.00</td>
+<td></td>
+</tr>
+<tr data-randomizable-option="data-randomizable-option">
+<td class="course-quiz-student-answer" dir="auto">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[Question 597][]" id="gensym_5764053b6c390" value="Option 2987" disabled=""><div style="font-family:monospace"><pre>Give a DAG with positive and distinct edge weights, Dijkstra's algorithm and the topological sort algorithm relax the vertices in the same order.</pre></div>
+</td>
+<td><span class="course-quiz-answer-correct" title="Correct" alt="Correct"><span class="icon-ok" alt="Correct"><span class="accessible-text-for-reader">Correct</span></span></span></td>
+<td>0.20</td>
+<td></td>
+</tr>
+<tr data-randomizable-option="data-randomizable-option">
+<td class="course-quiz-student-answer" dir="auto">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[Question 597][]" id="gensym_5764053b6cb89" value="Option 2988" disabled=""><div style="font-family:monospace"><pre>Let P be a shortest path from some s to t in an edge-weighted digraph G. If the weight of each edge in G is increased by one, then P will still be a shortest path from s to t in the modified digraph G'.</pre></div>
+</td>
+<td><span class="course-quiz-answer-correct" title="Correct" alt="Correct"><span class="icon-ok" alt="Correct"><span class="accessible-text-for-reader">Correct</span></span></span></td>
+<td>0.20</td>
+<td></td>
+</tr>
+<tr data-randomizable-option="data-randomizable-option">
+<td class="course-quiz-student-answer" dir="auto">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[Question 597][]" id="gensym_5764053b6d383" value="Option 2989" disabled=""><div style="font-family:monospace"><pre>If you run the Bellman-Ford algorithm on an edge-weighted digraph with positive edge weights and the shortest path from s to every other vertex has at most k edges, then no distTo[] values will change after the kth pass.</pre></div>
+</td>
+<td><span class="course-quiz-answer-incorrect" title="Incorrect" alt="Incorrect"><span class="icon-remove" alt="Incorrect"><span class="accessible-text-for-reader">Inorrect</span></span></span></td>
+<td>0.00</td>
+<td></td>
+</tr>
+<tr>
+<td>Total</td>
+<td></td>
+<td>0.40 / 1.00</td>
+<td></td>
+</tr>
+</tbody></table>
+<div dir="auto" class="course-quiz-question-explanation">
+<b>Question Explanation<br><br></b><div style="font-family:monospace"><pre></pre></div>
+</div>
+</div><div class="course-quiz-question-body">
+<h3 class="course-quiz-question-number">Question 5</h3>
+<div dir="auto" class="course-quiz-question-text">
+<div style="font-family:monospace"><pre>(seed = 398487)<br>Which of the following statements about maxflow and mincut are guaranteed to be true in any flow network G? Check all that apply. As usual, we use the term maxflow to refer to an st-maxflow and mincut to refer to an st-mincut and we assume the network is directed.</pre></div>
+</div>
+<div dir="auto" class="course-quiz-options"></div>
+<table class="table">
+<tbody><tr>
+<th>Your Answer</th>
+<th></th>
+<th>Score</th>
+<th>Explanation</th>
+</tr>
+<tr data-randomizable-option="data-randomizable-option">
+<td class="course-quiz-student-answer" dir="auto">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[Question 659][]" id="gensym_5764053b6fb1f" value="Option 3295" disabled=""><div style="font-family:monospace"><pre>The capacity of any cut is greater than or equal to the value of any flow.</pre></div>
+</td>
+<td><span class="course-quiz-answer-incorrect" title="Incorrect" alt="Incorrect"><span class="icon-remove" alt="Incorrect"><span class="accessible-text-for-reader">Inorrect</span></span></span></td>
+<td>0.00</td>
+<td>This is weak duality.</td>
+</tr>
+<tr data-randomizable-option="data-randomizable-option">
+<td class="course-quiz-student-answer" dir="auto">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[Question 659][]" id="gensym_5764053b70327" value="Option 3296" disabled=""><div style="font-family:monospace"><pre>If all edge capacities are even integers, then there exists an even-valued maxflow f*, i.e., f*(e) is an even integer for every edge e.</pre></div>
+</td>
+<td><span class="course-quiz-answer-incorrect" title="Incorrect" alt="Incorrect"><span class="icon-remove" alt="Incorrect"><span class="accessible-text-for-reader">Inorrect</span></span></span></td>
+<td>0.00</td>
+<td>Consider a maxflow obtained by running the Ford-Fulkerson algorithm. Throughout the algorithm, f(e) is an even integer for each edge e (because the bottleneck capacity is an even integer and the flow on an edge increases or decreases by the bottleneck capacity). Thus, upon termination, f*(e) is an even integer for each edge e.</td>
+</tr>
+<tr data-randomizable-option="data-randomizable-option">
+<td class="course-quiz-student-answer" dir="auto">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[Question 659][]" id="gensym_5764053b70b15" value="Option 3297" disabled=""><div style="font-family:monospace"><pre>A path P is a directed path from s to t in the residual network if and only if it is an augmenting path in the original network.</pre></div>
+</td>
+<td><span class="course-quiz-answer-incorrect" title="Incorrect" alt="Incorrect"><span class="icon-remove" alt="Incorrect"><span class="accessible-text-for-reader">Inorrect</span></span></span></td>
+<td>0.00</td>
+<td>This is a key property of the residual network.</td>
+</tr>
+<tr data-randomizable-option="data-randomizable-option">
+<td class="course-quiz-student-answer" dir="auto">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[Question 659][]" id="gensym_5764053b71310" value="Option 3298" disabled=""><div style="font-family:monospace"><pre>Suppose there is no augmenting path with respect to flow f. Then, f is a maxflow.</pre></div>
+</td>
+<td><span class="course-quiz-answer-incorrect" title="Incorrect" alt="Incorrect"><span class="icon-remove" alt="Incorrect"><span class="accessible-text-for-reader">Inorrect</span></span></span></td>
+<td>0.00</td>
+<td>This is the augmenting path theorem.</td>
+</tr>
+<tr data-randomizable-option="data-randomizable-option">
+<td class="course-quiz-student-answer" dir="auto">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[Question 659][]" id="gensym_5764053b71afa" value="Option 3299" disabled=""><div style="font-family:monospace"><pre>The number of augmentations performed by the Ford-Fulkerson algorithms is bounded by a polynomial function of V and E, regardless of the rule used to choose augmenting paths.</pre></div>
+</td>
+<td><span class="course-quiz-answer-correct" title="Correct" alt="Correct"><span class="icon-ok" alt="Correct"><span class="accessible-text-for-reader">Correct</span></span></span></td>
+<td>0.20</td>
+<td>This is true if the algorithm always choosing an augmenting path with the fewest number of edges, but it is not true for the generic version of the algorithm.</td>
+</tr>
+<tr>
+<td>Total</td>
+<td></td>
+<td>0.20 / 1.00</td>
+<td></td>
+</tr>
+</tbody></table>
+<div dir="auto" class="course-quiz-question-explanation">
+<b>Question Explanation<br><br></b><div style="font-family:monospace"><pre></pre></div>
+</div>
+</div><div class="course-quiz-question-body">
+<h3 class="course-quiz-question-number">Question 6</h3>
+<div style="float:none;width:100%"> <div dir="auto" class="course-quiz-question-text">
+<div style="font-family:monospace"><pre>(seed = 492641)<br>The column on the left contains the original input of 24 strings to be sorted;<br>the column on the right contains the strings in sorted order; the other 7 columns contain the<br>contents at some intermediate step during one of the 3 radix sorting algorithms listed below.<br><br>    JAYZ   ACDC   UB40   SADE   DOOM   ABBA   AQUA   UB40   ABBA   <br>    NOFX   ABBA   SOAD   VAIN   AQUA   ACDC   ACDC   ENYA   ACDC   <br>    KISS   AQUA   KMAG   LARD   ACDC   AQUA   BLUR   ABBA   AQUA   <br>    ACDC   BLUR   SEAL   JAYZ   FIXX   BLUR   BECK   AQUA   BECK   <br>    FIXX   BECK   ABBA   UB40   BECK   BECK   ABBA   NENA   BLUR   <br>    SADE   DEVO   BECK   ABBA   ABBA   DEVO   DOOM   ACDC   DEVO   <br>    KMAG   DOOM   ACDC   ACDC   DEVO   DOOM   DEVO   SOAD   DOOM   <br>    DEVO   ENYA   SADE   SEAL   BLUR   ENYA   ENYA   LARD   ENYA   <br>    VAIN   FIXX   WEEN   BECK   ENYA   FIXX   FIXX   SADE   FIXX   <br>    ENYA   JAYZ   NOFX   WEEN   JAYZ   JAYZ   JAYZ   MUSE   JAYZ   <br>    SOAD   KISS   VAIN   NENA   SOAD   KISS   SOAD   KMAG   KISS   <br>    BLUR   KMAG   NENA   DEVO   VAIN   KMAG   VAIN   BECK   KMAG   <br>    ABBA   LARD   PINK   PINK   KMAG   LARD   KMAG   PINK   LARD   <br>    BECK   MUSE   TSOL   KISS   UB40   MUSE   UB40   TSOL   MUSE   <br>    UB40   NOFX   DOOM   FIXX   TSOL   NOFX   TSOL   SEAL   NENA   <br>    TSOL   NENA   LARD   BLUR   LARD   NENA   LARD   DOOM   NOFX   <br>    LARD   PINK   MUSE   KMAG   WEEN   PINK   WEEN   VAIN   PINK   <br>    WEEN   SADE   KISS   ENYA   SADE   SADE   SADE   WEEN   SADE   <br>    AQUA   SOAD   AQUA   SOAD   PINK   SOAD   PINK   DEVO   SEAL   <br>    PINK   SEAL   BLUR   NOFX   MUSE   SEAL   MUSE   BLUR   SOAD   <br>    MUSE   TSOL   DEVO   DOOM   SEAL   TSOL   SEAL   KISS   TSOL   <br>    SEAL   UB40   FIXX   AQUA   NENA   UB40   NENA   NOFX   UB40   <br>    NENA   VAIN   ENYA   TSOL   KISS   VAIN   KISS   FIXX   VAIN   <br>    DOOM   WEEN   JAYZ   MUSE   NOFX   WEEN   NOFX   JAYZ   WEEN   <br>    ----   ----   ----   ----   ----   ----   ----   ----   ----   <br>     0      ?      ?      ?      ?      ?      ?      ?      4     <br><br><br>Match up each column with the corresponding sorting algorithm from the given list:<br><br>    0. Original input<br>    1. LSD radix sort<br>    2. MSD radix sort<br>    3. 3-way radix quicksort (no shuffle)<br>    4. Sorted<br><br>You may use an algorithm more than once. Your answer should be a sequence of 9 integers between<br>0 and 4 (starting with 0 and ending with 4), with each integer separated by whitespace.<br><br>Hint: think about algorithm invariants. Do not trace code.<br></pre></div>
+</div>
+</div>
+<label for="gensym_5764053b73595" class="hidden">Answer for Question 6</label><div class="course-quiz-options"></div>
+<div style="padding:5px">
+<strong>You entered:</strong>
+</div>
+<textarea dir="auto" id="gensym_5764053b73595" class="course-quiz-input" name="answer[Question 791][answer]" readonly=""></textarea><table class="table">
+<tbody><tr>
+<th>Your Answer</th>
+<th></th>
+<th>Score</th>
+<th>Explanation</th>
+</tr>
+<tr>
+<td dir="auto" class="course-quiz-student-answer"></td>
+<td class="course-quiz-answer-incorrect" title="Incorrect" alt="Incorrect"><span class="icon-remove" alt="Incorrect"><span class="accessible-text-for-reader">Incorrect</span></span></td>
+<td>0.00</td>
+<td></td>
+</tr>
+<tr>
+<td>Total</td>
+<td></td>
+<td>0.00 / 1.00</td>
+<td></td>
+</tr>
+</tbody></table>
+<div dir="auto" class="course-quiz-question-explanation">
+<b>Question Explanation<br><br></b><div style="font-family:monospace"><pre>The correct answer is: 0 2 1 1 3 2 3 1 4<br><br> 0: Original input<br> 2: MSD radix sort after the first call to key-indexed counting<br> 1: LSD radix sort after 2 passes<br> 1: LSD radix sort after 3 passes<br> 3: 3-way radix quicksort after the first partitioning step<br> 2: MSD radix sort after the second call to key-indexed counting<br> 3: 3-way radix quicksort after the second partitioning step<br> 1: LSD radix sort after 1 pass<br> 4: Sorted<br></pre></div> </div>
+</div><div class="course-quiz-question-body">
+<h3 class="course-quiz-question-number">Question 7</h3>
+<div style="float:none;width:100%"> <div dir="auto" class="course-quiz-question-text">
+<div style="font-family:monospace"><pre>(seed = 695164)<br>What is the Burrows-Wheeler inverse transform of the following?<br><br>    1  C B A D D D D A <br><br>Your answer should be a sequence of 8 characters, with each character separated by whitespace.</pre></div>
+</div>
+</div>
+<label for="gensym_5764053b762c5" class="hidden">Answer for Question 7</label><div class="course-quiz-options"></div>
+<div style="padding:5px">
+<strong>You entered:</strong>
+</div>
+<textarea dir="auto" id="gensym_5764053b762c5" class="course-quiz-input" name="answer[Question 995][answer]" readonly=""></textarea><table class="table">
+<tbody><tr>
+<th>Your Answer</th>
+<th></th>
+<th>Score</th>
+<th>Explanation</th>
+</tr>
+<tr>
+<td dir="auto" class="course-quiz-student-answer"></td>
+<td class="course-quiz-answer-incorrect" title="Incorrect" alt="Incorrect"><span class="icon-remove" alt="Incorrect"><span class="accessible-text-for-reader">Incorrect</span></span></td>
+<td>0.00</td>
+<td></td>
+</tr>
+<tr>
+<td>Total</td>
+<td></td>
+<td>0.00 / 1.00</td>
+<td></td>
+</tr>
+</tbody></table>
+<div dir="auto" class="course-quiz-question-explanation">
+<b>Question Explanation<br><br></b><div style="font-family:monospace"><pre>The correct answer is: A D D D D C A B<br><br><br>Below are the sorted cyclic suffixes and the next[] array:<br><br>  i  suffixes[i]   t   next[i]<br> -----------------------------<br>  0  A ? ? ? ? ? ? C     2<br>* 1  A ? ? ? ? ? ? B     7<br>  2  B ? ? ? ? ? ? A     1<br>  3  C ? ? ? ? ? ? D     0<br>  4  D ? ? ? ? ? ? D     3<br>  5  D ? ? ? ? ? ? D     4<br>  6  D ? ? ? ? ? ? D     5<br>  7  D ? ? ? ? ? ? A     6<br><br>Since first = 1, the first character is A (the first character in row 1).<br><br>Since next[1] = 7, the second character is D (the first character in row 7).<br><br>Since next[next[1]] = 6, the third character is D (the first character in row 6).<br><br>Since next[next[next[1]]] = 5, the fourth character is D (the first character in row 5).<br></pre></div> </div>
+</div><div class="course-quiz-question-body">
+<h3 class="course-quiz-question-number">Question 8</h3>
+<div dir="auto" class="course-quiz-question-text">
+<div style="font-family:monospace"><pre>(seed = 437658)<br>Suppose that problem A linear-time reduces to problem B. Which of the following can you infer? Check all that apply.</pre></div>
+</div>
+<div dir="auto" class="course-quiz-options"></div>
+<table class="table">
+<tbody><tr>
+<th>Your Answer</th>
+<th></th>
+<th>Score</th>
+<th>Explanation</th>
+</tr>
+<tr data-randomizable-option="data-randomizable-option">
+<td class="course-quiz-student-answer" dir="auto">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[Question 1259][]" id="gensym_5764053b79b32" value="Option 4495" disabled=""><div style="font-family:monospace"><pre>If A cannot be solved in linear time, then B cannot be solved in poly-time.</pre></div>
+</td>
+<td><span class="course-quiz-answer-correct" title="Correct" alt="Correct"><span class="icon-ok" alt="Correct"><span class="accessible-text-for-reader">Correct</span></span></span></td>
+<td>0.20</td>
+<td></td>
+</tr>
+<tr data-randomizable-option="data-randomizable-option">
+<td class="course-quiz-student-answer" dir="auto">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[Question 1259][]" id="gensym_5764053b7a38b" value="Option 4496" disabled=""><div style="font-family:monospace"><pre>If A cannot be solved in linear time, then neither can B.</pre></div>
+</td>
+<td><span class="course-quiz-answer-incorrect" title="Incorrect" alt="Incorrect"><span class="icon-remove" alt="Incorrect"><span class="accessible-text-for-reader">Inorrect</span></span></span></td>
+<td>0.00</td>
+<td></td>
+</tr>
+<tr data-randomizable-option="data-randomizable-option">
+<td class="course-quiz-student-answer" dir="auto">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[Question 1259][]" id="gensym_5764053b7abc1" value="Option 4497" disabled=""><div style="font-family:monospace"><pre>If B cannot be solved in linear time, then neither can A.</pre></div>
+</td>
+<td><span class="course-quiz-answer-correct" title="Correct" alt="Correct"><span class="icon-ok" alt="Correct"><span class="accessible-text-for-reader">Correct</span></span></span></td>
+<td>0.20</td>
+<td></td>
+</tr>
+<tr data-randomizable-option="data-randomizable-option">
+<td class="course-quiz-student-answer" dir="auto">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[Question 1259][]" id="gensym_5764053b7b3c5" value="Option 4498" disabled=""><div style="font-family:monospace"><pre>If B cannot be solved in poly-time, then neither can A.</pre></div>
+</td>
+<td><span class="course-quiz-answer-correct" title="Correct" alt="Correct"><span class="icon-ok" alt="Correct"><span class="accessible-text-for-reader">Correct</span></span></span></td>
+<td>0.20</td>
+<td></td>
+</tr>
+<tr data-randomizable-option="data-randomizable-option">
+<td class="course-quiz-student-answer" dir="auto">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[Question 1259][]" id="gensym_5764053b7bbae" value="Option 4499" disabled=""><div style="font-family:monospace"><pre>If A cannot be solved in quadratic time, then neither can B.</pre></div>
+</td>
+<td><span class="course-quiz-answer-incorrect" title="Incorrect" alt="Incorrect"><span class="icon-remove" alt="Incorrect"><span class="accessible-text-for-reader">Inorrect</span></span></span></td>
+<td>0.00</td>
+<td></td>
+</tr>
+<tr>
+<td>Total</td>
+<td></td>
+<td>0.60 / 1.00</td>
+<td></td>
+</tr>
+</tbody></table>
+<div dir="auto" class="course-quiz-question-explanation">
+<b>Question Explanation<br><br></b><div style="font-family:monospace"><pre></pre></div>
+</div>
+</div><div class="course-quiz-question-body">
+<h3 class="course-quiz-question-number">Question 9</h3>
+<div dir="auto" class="course-quiz-question-text">
+<div style="font-family:monospace"><pre>(seed = 322292)<br>Suppose that problems A and B are both in NP and that A poly-time reduces to B. Which of the following can you infer? Check all that apply.</pre></div>
+</div>
+<div dir="auto" class="course-quiz-options"></div>
+<table class="table">
+<tbody><tr>
+<th>Your Answer</th>
+<th></th>
+<th>Score</th>
+<th>Explanation</th>
+</tr>
+<tr data-randomizable-option="data-randomizable-option">
+<td class="course-quiz-student-answer" dir="auto">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[Question 2091][]" id="gensym_5764053b7e863" value="Option 8659" disabled=""><div style="font-family:monospace"><pre>If B can be solved in quadratic time, then A can be solved in quadratic time.</pre></div>
+</td>
+<td><span class="course-quiz-answer-correct" title="Correct" alt="Correct"><span class="icon-ok" alt="Correct"><span class="accessible-text-for-reader">Correct</span></span></span></td>
+<td>0.20</td>
+<td></td>
+</tr>
+<tr data-randomizable-option="data-randomizable-option">
+<td class="course-quiz-student-answer" dir="auto">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[Question 2091][]" id="gensym_5764053b7f04d" value="Option 8658" disabled=""><div style="font-family:monospace"><pre>If A cannot be solved in poly-time, then P != NP.</pre></div>
+</td>
+<td><span class="course-quiz-answer-incorrect" title="Incorrect" alt="Incorrect"><span class="icon-remove" alt="Incorrect"><span class="accessible-text-for-reader">Inorrect</span></span></span></td>
+<td>0.00</td>
+<td></td>
+</tr>
+<tr data-randomizable-option="data-randomizable-option">
+<td class="course-quiz-student-answer" dir="auto">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[Question 2091][]" id="gensym_5764053b7f86c" value="Option 8655" disabled=""><div style="font-family:monospace"><pre>If B can be solved in poly-time, then so can A.</pre></div>
+</td>
+<td><span class="course-quiz-answer-incorrect" title="Incorrect" alt="Incorrect"><span class="icon-remove" alt="Incorrect"><span class="accessible-text-for-reader">Inorrect</span></span></span></td>
+<td>0.00</td>
+<td></td>
+</tr>
+<tr data-randomizable-option="data-randomizable-option">
+<td class="course-quiz-student-answer" dir="auto">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[Question 2091][]" id="gensym_5764053b80224" value="Option 8657" disabled=""><div style="font-family:monospace"><pre>A and B can both be solved in exponential time.</pre></div>
+</td>
+<td><span class="course-quiz-answer-incorrect" title="Incorrect" alt="Incorrect"><span class="icon-remove" alt="Incorrect"><span class="accessible-text-for-reader">Inorrect</span></span></span></td>
+<td>0.00</td>
+<td></td>
+</tr>
+<tr data-randomizable-option="data-randomizable-option">
+<td class="course-quiz-student-answer" dir="auto">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[Question 2091][]" id="gensym_5764053b80a1c" value="Option 8656" disabled=""><div style="font-family:monospace"><pre>If B cannot be solved in poly-time, then P != NP.</pre></div>
+</td>
+<td><span class="course-quiz-answer-incorrect" title="Incorrect" alt="Incorrect"><span class="icon-remove" alt="Incorrect"><span class="accessible-text-for-reader">Inorrect</span></span></span></td>
+<td>0.00</td>
+<td></td>
+</tr>
+<tr>
+<td>Total</td>
+<td></td>
+<td>0.20 / 1.00</td>
+<td></td>
+</tr>
+</tbody></table>
+<div dir="auto" class="course-quiz-question-explanation">
+<b>Question Explanation<br><br></b><div style="font-family:monospace"><pre></pre></div>
+</div>
+</div><div class="course-quiz-question-body">
+<h3 class="course-quiz-question-number">Question 10</h3>
+<div dir="auto" class="course-quiz-question-text">
+<div style="font-family:monospace"><pre>(seed = 184922)<br>You are applying for a job at a new software technology company. Your interviewer asks you to identify which of the following graph-processing tasks are possible using techniques discussed in Algorithms, Part II. Check all that apply.</pre></div>
+</div>
+<div dir="auto" class="course-quiz-options"></div>
+<table class="table">
+<tbody><tr>
+<th>Your Answer</th>
+<th></th>
+<th>Score</th>
+<th>Explanation</th>
+</tr>
+<tr data-randomizable-option="data-randomizable-option">
+<td class="course-quiz-student-answer" dir="auto">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[Question 2141][]" id="gensym_5764053b831d5" value="Option 8905" disabled=""><div style="font-family:monospace"><pre>Given an undirected graph, find a simple cycle with the fewest edges in E V time.</pre></div>
+</td>
+<td><span class="course-quiz-answer-incorrect" title="Incorrect" alt="Incorrect"><span class="icon-remove" alt="Incorrect"><span class="accessible-text-for-reader">Inorrect</span></span></span></td>
+<td>0.00</td>
+<td>Run BFS from each vertex s. A shortest cycle through s is an edge v-s, plus a shortest path between s and v.</td>
+</tr>
+<tr data-randomizable-option="data-randomizable-option">
+<td class="course-quiz-student-answer" dir="auto">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[Question 2141][]" id="gensym_5764053b83a10" value="Option 8906" disabled=""><div style="font-family:monospace"><pre>Given an digraph, design an E V algorithm to find a directed cycle with the fewest edges.</pre></div>
+</td>
+<td><span class="course-quiz-answer-incorrect" title="Incorrect" alt="Incorrect"><span class="icon-remove" alt="Incorrect"><span class="accessible-text-for-reader">Inorrect</span></span></span></td>
+<td>0.00</td>
+<td>Run BFS from each vertex s. The shortest directed cycle through s is an edge v-&gt;s, plus a shortest path from s to v.</td>
+</tr>
+<tr data-randomizable-option="data-randomizable-option">
+<td class="course-quiz-student-answer" dir="auto">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[Question 2141][]" id="gensym_5764053b841f1" value="Option 8907" disabled=""><div style="font-family:monospace"><pre>Given a digraph, design an E + V algorithm to find a directed cycle.</pre></div>
+</td>
+<td><span class="course-quiz-answer-incorrect" title="Incorrect" alt="Incorrect"><span class="icon-remove" alt="Incorrect"><span class="accessible-text-for-reader">Inorrect</span></span></span></td>
+<td>0.00</td>
+<td>DFS.</td>
+</tr>
+<tr data-randomizable-option="data-randomizable-option">
+<td class="course-quiz-student-answer" dir="auto">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[Question 2141][]" id="gensym_5764053b849f8" value="Option 8908" disabled=""><div style="font-family:monospace"><pre>Given a digraph, design an E + V algorithm to determine there is a vertex that is reachable from every other vertex.</pre></div>
+</td>
+<td><span class="course-quiz-answer-incorrect" title="Incorrect" alt="Incorrect"><span class="icon-remove" alt="Incorrect"><span class="accessible-text-for-reader">Inorrect</span></span></span></td>
+<td>0.00</td>
+<td>Compute the strong components and look at the kernel DAG.</td>
+</tr>
+<tr data-randomizable-option="data-randomizable-option">
+<td class="course-quiz-student-answer" dir="auto">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[Question 2141][]" id="gensym_5764053b85259" value="Option 8909" disabled=""><div style="font-family:monospace"><pre>Given a digraph where each edge is colored black or orange and two distinguished vertices s and t, find a path from s to t that uses the fewest black edges in E + V time.</pre></div>
+</td>
+<td><span class="course-quiz-answer-incorrect" title="Incorrect" alt="Incorrect"><span class="icon-remove" alt="Incorrect"><span class="accessible-text-for-reader">Inorrect</span></span></span></td>
+<td>0.00</td>
+<td>This is a shortest-path problem where orange edges have weight 0 and black edges have weight 1.</td>
+</tr>
+<tr>
+<td>Total</td>
+<td></td>
+<td>0.00 / 1.00</td>
+<td></td>
+</tr>
+</tbody></table>
+<div dir="auto" class="course-quiz-question-explanation">
+<b>Question Explanation<br><br></b><div style="font-family:monospace"><pre></pre></div>
+</div>
+</div><div class="course-quiz-question-body">
+<h3 class="course-quiz-question-number">Question 11</h3>
+<div dir="auto" class="course-quiz-question-text">
+<div style="font-family:monospace"><pre>(seed = 888220)<br>You are applying for a job at a new software technology company. Your interviewer asks you to identify which of the following string-processing tasks are possible using techniques discussed in Algorithms, Part II. Check all that apply.</pre></div>
+</div>
+<div dir="auto" class="course-quiz-options"></div>
+<table class="table">
+<tbody><tr>
+<th>Your Answer</th>
+<th></th>
+<th>Score</th>
+<th>Explanation</th>
+</tr>
+<tr data-randomizable-option="data-randomizable-option">
+<td class="course-quiz-student-answer" dir="auto">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[Question 2259][]" id="gensym_5764053b87a83" value="Option 9495" disabled=""><div style="font-family:monospace"><pre>Design a data compression algorithm that achieve a 50% compression ratio for typical natural language inputs.</pre></div>
+</td>
+<td><span class="course-quiz-answer-incorrect" title="Incorrect" alt="Incorrect"><span class="icon-remove" alt="Incorrect"><span class="accessible-text-for-reader">Inorrect</span></span></span></td>
+<td>0.00</td>
+<td>LZW and Burrows-Wheeler achieve this.</td>
+</tr>
+<tr data-randomizable-option="data-randomizable-option">
+<td class="course-quiz-student-answer" dir="auto">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[Question 2259][]" id="gensym_5764053b8827c" value="Option 9496" disabled=""><div style="font-family:monospace"><pre>Determine whether a pattern string of length M is a substring of a text string of length N in time proportional to M + N^(8/9) in the worst case.</pre></div>
+</td>
+<td><span class="course-quiz-answer-correct" title="Correct" alt="Correct"><span class="icon-ok" alt="Correct"><span class="accessible-text-for-reader">Correct</span></span></span></td>
+<td>0.20</td>
+<td>Boyer-Moore achieves sublinear on typical inputs but not in the worst case.</td>
+</tr>
+<tr data-randomizable-option="data-randomizable-option">
+<td class="course-quiz-student-answer" dir="auto">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[Question 2259][]" id="gensym_5764053b88a77" value="Option 9497" disabled=""><div style="font-family:monospace"><pre>Simulate an N-character input on an M-state NFA over the binary alphabet in time proportional to M + N.</pre></div>
+</td>
+<td><span class="course-quiz-answer-correct" title="Correct" alt="Correct"><span class="icon-ok" alt="Correct"><span class="accessible-text-for-reader">Correct</span></span></span></td>
+<td>0.20</td>
+<td>Our simulation algorithm takes time proportional to M N.</td>
+</tr>
+<tr data-randomizable-option="data-randomizable-option">
+<td class="course-quiz-student-answer" dir="auto">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[Question 2259][]" id="gensym_5764053b89244" value="Option 9498" disabled=""><div style="font-family:monospace"><pre>Determine whether an M-character extended regular expression (allowing or, closure, wildcard, and back references) matches an N-character text in time proportional to M N.</pre></div>
+</td>
+<td><span class="course-quiz-answer-correct" title="Correct" alt="Correct"><span class="icon-ok" alt="Correct"><span class="accessible-text-for-reader">Correct</span></span></span></td>
+<td>0.20</td>
+<td>Our algorithm takes time proportional to M N but does not support back references. Adding back references makes the problem NP-complete, so a poly-time algorithm is unlikely.</td>
+</tr>
+<tr data-randomizable-option="data-randomizable-option">
+<td class="course-quiz-student-answer" dir="auto">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[Question 2259][]" id="gensym_5764053b89a40" value="Option 9499" disabled=""><div style="font-family:monospace"><pre>Determining whether two strings s and t of length N are cyclic rotations of one another in time proportional to N (in the worst case).</pre></div>
+</td>
+<td><span class="course-quiz-answer-incorrect" title="Incorrect" alt="Incorrect"><span class="icon-remove" alt="Incorrect"><span class="accessible-text-for-reader">Inorrect</span></span></span></td>
+<td>0.00</td>
+<td>Use Knuth-Morris-Pratt to search for s in t + t.</td>
+</tr>
+<tr>
+<td>Total</td>
+<td></td>
+<td>0.60 / 1.00</td>
+<td></td>
+</tr>
+</tbody></table>
+<div dir="auto" class="course-quiz-question-explanation">
+<b>Question Explanation<br><br></b><div style="font-family:monospace"><pre></pre></div>
+</div>
+</div>
+    
+        
+
+
+    </form>
+
+<script type="text/x-mathjax-config;executed=true">
+MathJax.Hub.Config({
+  config: ["MMLorHTML.js"],
+  
+  styleSheets: [],
+  styles: {},
+
+  jax: ["input/TeX"],
+  
+  extensions: ["tex2jax.js"],
+
+  preJax: null,
+  postJax: null,
+
+  preRemoveClass: "MathJax_Preview",
+
+  showProcessingMessages: true,
+
+  messageStyle: "none",
+  
+  displayAlign: "center",
+  displayIndent: "0em",
+  
+  delayStartupUntil: "none",
+
+  skipStartupTypeset: false,
+  
+  elements: [],
+  
+  tex2jax: {
+	    inlineMath: [
+	                 ['$$','$$'],      // uncomment this for standard TeX math delimiters
+	                 ['\\(','\\)']
+	                 ],
+
+	                 displayMath: [
+	                 ['\\[','\\]']
+	                 ],
+
+    skipTags: ["script","noscript","style","textarea","pre","code"],
+    ignoreClass: "tex2jax_ignore",
+    processClass: "tex2jax_process",
+    processEscapes: false,
+    processEnvironments: true,
+    preview: "TeX"
+    
+  },
+  
+  mml2jax: {
+    preview: "alttext"
+    
+  },
+  
+  jsMath2jax: {
+    preview: "TeX"
+    
+  },
+
+  TeX: {
+    TagSide: "right",
+    TagIndent: ".8em",
+    MultLineWidth: "85%",
+    Macros: {},
+
+    extensions: ["AMSmath.js", "AMSsymbols.js"]
+    
+  },
+
+  //============================================================================
+  //
+  //  These parameters control the MathML inupt jax.
+  //
+  MathML: {
+    //
+    //  This specifies whether to use TeX spacing or MathML spacing when the
+    //  HTML-CSS output jax is used.
+    //
+    useMathMLspacing: false
+  },
+  
+  //============================================================================
+  //
+  //  These parameters control the HTML-CSS output jax.
+  //
+  "HTML-CSS": {
+    
+    scale: 100,
+    
+    availableFonts: ["STIX","TeX"],
+    
+    preferredFont: "TeX",
+    
+    webFont: "TeX",
+    
+    imageFont: "TeX",
+    
+    undefinedFamily: "STIXGeneral,'Arial Unicode MS',serif",
+      
+    showMathMenu: true,
+
+    styles: {},
+    
+    tooltip: {
+      delayPost: 600,          // milliseconds delay before tooltip is posted after mouseover
+      delayClear: 600,         // milliseconds delay before tooltip is cleared after mouseout
+      offsetX: 10, offsetY: 5  // pixels to offset tooltip from mouse position
+    }
+  },
+  
+  //============================================================================
+  //
+  //  These parameters control the NativeMML output jax.
+  //
+  NativeMML: {
+
+    scale: 100,
+
+    showMathMenu: true,
+    showMathMenuMSIE: true,
+
+    styles: {}
+  },
+  
+  MathMenu: {
+    delay: 400,
+    
+    helpURL: "http://www.mathjax.org/help/user/",
+
+    showRenderer: true,
+    showFontMenu: false,
+    showContext:  false,
+
+    windowSettings: {
+      status: "no", toolbar: "no", locationbar: "no", menubar: "no",
+      directories: "no", personalbar: "no", resizable: "yes", scrollbars: "yes",
+      width: 100, height: 50
+    },
+    
+    styles: {}
+    
+  },
+
+  MMLorHTML: {
+    prefer: {
+      MSIE:    "MML",
+      Firefox: "HTML",
+      Opera:   "HTML",
+      other:   "HTML"
+    }
+  }
+});
+</script>
+</div></div></div></div></div><div class="coursera-footer"></div></div></div></div><!--[if gte IE 9]><script>document.getElementById("coursera-loading-js").style.display = 'block';</script><![endif]-->
+<!--[if lte IE 8]><script>document.getElementById("coursera-loading-nojs").style.display = 'block';</script><![endif]-->
+<!--[if !IE]> --><script>document.getElementById("coursera-loading-js").style.display = 'block';</script><!-- <![endif]--><script>if (/zh/i.test(window.localStorage ? localStorage.getItem('locale') : '') || '{{ locale }}') {
+  document.getElementById('get-browser-zh').style.display = 'block';
+}</script><!--[if !IE]> --><script>document.getElementById('coursera-loading-js').style.display = 'block';</script><!-- <![endif]-->
+    <script src="./final_exam_files/jquery.v1-7.js"></script>
+      <script src="./final_exam_files/loadOrRefreshMathJax.js"></script>
+  <script src="./final_exam_files/require.v2-1-1.js"></script><script data-baseurl="https://dw0ugk4msqulk.cloudfront.net/61a7c1335d196f1295e3341330ed120d255fe89d/" data-version="61a7c1335d196f1295e3341330ed120d255fe89d" data-timestamp="1465424411607" data-debug="0" data-locale="en" id="_require">if(document.getElementById('coursera-loading-js').style.display == 'block') {
+  (function(el) {
+     require.config({
+       //enforceDefine: true,
+       waitSeconds: 75,
+       baseUrl: el.getAttribute('data-baseurl'),
+       urlArgs: el.getAttribute('data-debug') == '1' ? 'v=' + el.getAttribute('data-timestamp') : '',
+       shim: {
+          'underscore': {
+             exports: '_'
+          },
+          'backbone': {
+             deps: ['underscore', 'jquery'],
+             exports: 'Backbone',
+             init: function(_, $) {
+               Backbone.$ = $;
+               return Backbone;
+             }
+          },
+          'pages/hg/thirdparty/js/backbone.marionette': {
+            deps: ['backbone']
+          },
+          'pages/hg/thirdparty/js/webshims/polyfiller': {
+            deps: ['jquery']
+          },
+          'pages/hg/thirdparty/js/webshims/extras/mousepress': {
+            deps: ['jquery', 'pages/hg/thirdparty/js/webshims/polyfiller']
+          },
+          'pages/hg/thirdparty/js/jquery.throttle': {
+            deps: ['jquery']
+          },
+          'js/lib/jquery.linkify': {
+            deps: ['jquery']
+          },
+          'pages/hg/thirdparty/js/js/bootstrap/alert': {
+            deps: ['jquery', 'pages/hg/thirdparty/js/bootstrap/transition']
+          },
+          'spark/core/js/jquery_ui': {
+            deps: ['jquery']
+          },
+          'spark/core/js/jquery.history': {
+            deps: ['jquery']
+          },
+          'js/lib/bootstrap.tooltip': {
+            deps: ['jquery']
+          },
+          'pages/hg/thirdparty/js/bootstrap/transition': {
+            deps: ['jquery']
+          },
+          'pages/hg/thirdparty/js/bootstrap/tab': {
+            deps: ['jquery']
+          },
+          'bundles/videojs/lib/video.4.3.0': {
+            exports: 'vjs'
+          }
+       },
+       paths: {
+          'q': 'js/vendor/q.v1-0-1',
+          'react-with-addons': 'js/vendor/react-with-addons.v0-12',
+          'jquery':                         'pages/spark/jquery',
+          'underscore':                     'js/vendor/underscore.v1-5-2',
+          'backbone':                       'js/vendor/backbone.v1-1-0',
+          'backbone.relational':            'js/lib/backbone.relational.0.8.6',
+          'i18n':                           'js/lib/i18n._t',
+          'css':                            'js/vendor/require.css.v0-1-2',
+          'memoize':                        'js/lib/require.memoize.v0-0-1',
+          'pages/spark/models/user.json':   'empty:',
+          'pages/spark/models/course.json': 'empty:',
+          'pages/spark/models/navbar.json': 'empty:'
+       },
+       callback: function() {
+                    require(['pages/spark/routes']);
+                },
+       config: {
+         i18n: {
+           locale: (window.localStorage ? localStorage.getItem('locale') : '') || el.getAttribute('data-locale')
+         }
+       }
+     });
+  })(document.getElementById('_require'));
+}
+</script><script>define('pages/spark/models/user.json', [], function(){
+      return JSON.parse("{\"id\":8379441,\"email_address\":\"jifuzhao@gmail.com\",\"full_name\":\"Jifu Zhao\",\"locale\":null,\"timezone\":\"America\\\/Los_Angeles\",\"access_group_id\":\"4\",\"registration_time\":\"1463365864\",\"last_access_time\":\"1466172588\",\"last_access_ip\":\"128.174.163.203\",\"signature_track_register_time\":\"0\",\"email_announcement\":\"1\",\"email_forum\":\"1\",\"in_signature_track\":\"0\",\"wishes_proctored_exam\":\"0\",\"first_name\":\"Jifu\",\"permissions\":[\"default\",\"allow_site_access\"],\"group\":\"Student\",\"anonymous\":false,\"forum_title\":\"Student\",\"signature_track_state\":1,\"verified_quizzes\":[],\"submitted_quizzes\":[\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\",\"8\",\"52\",\"53\",\"54\",\"55\",\"56\",\"59\",\"60\",\"61\",\"62\",\"63\",\"89\",\"90\",\"91\",\"92\",\"93\",\"193\",\"197\"],\"scheduled_proctored_exam\":null,\"last_chance_modal\":null,\"flexjoin_last_chance_modal\":null}");
+  });
+define('pages/spark/models/course.json', [], function(){
+      return JSON.parse("{\"id\":976748,\"isPrivate\":false,\"type\":\"public\",\"name\":\"Algorithms, Part II\",\"instructor\":\"Kevin Wayne, Robert Sedgewick\",\"sessionName\":\"algs4partII-007\",\"externalBaseURL\":\"https:\\\/\\\/www.coursera.org\\\/\",\"shortname\":\"algs4partII\",\"host\":\"https:\\\/\\\/www.coursera.org\\\/\",\"assetUnversionedLink\":\"https:\\\/\\\/dw0ugk4msqulk.cloudfront.net\\\/\",\"cheggID\":\"\",\"hasLTI\":true,\"badgevilleDomain\":\"\",\"linkable\":false,\"universityShortname\":\"princeton\",\"signatureTrackStatus\":{\"signature_track_enabled\":0},\"courseURLs\":{\"log_in_link\":\"https:\\\/\\\/www.coursera.org\\\/login?post_redirect=https%3A%2F%2Fwww.coursera.org%2Flogin%3Fuser_action%3Dclass%26course_id%3D976748%26post_redirect%3Dhttps%253A%252F%252Fclass.coursera.org%252Falgs4partII-007%252Fauth%252Fauth_redirector%253Ftype%253Dlogin%2526subtype%253Dnormal%2526visiting%253D\",\"sign_up_link\":\"https:\\\/\\\/www.coursera.org\\\/signup?enroll_cid=976748&enroll_sn=algs4partII&enroll_n=Algorithms, Part II\",\"view_course_info_link\":\"https:\\\/\\\/www.coursera.org\\\/course\\\/algs4partII\",\"sign_up_link_cant_enroll\":\"https:\\\/\\\/www.coursera.org\\\/signup?post_redirect=https%3A%2F%2Fwww.coursera.org%2Fcourse%2Falgs4partII\"},\"courseBase\":\"https:\\\/\\\/class.coursera.org\\\/algs4partII-007\\\/\",\"search\":true,\"hideWiki\":true,\"aceStartRegistrationDate\":\"Wed 31 Dec 1969  4:00 PM PST\",\"aceEndRegistrationDate\":\"Wed 31 Dec 1969  4:00 PM PST\",\"aceExamStartDate\":\"Wed 31 Dec 1969  4:00 PM PST\",\"aceExamEndDate\":\"Wed 31 Dec 1969  4:00 PM PST\",\"aceExamRules\":\"\",\"aceExamDuration\":\"\",\"aceBeforeExam\":false,\"aceAfterExam\":true,\"aceHours\":null,\"aceCreditType\":\"\",\"acePrice\":null,\"aceExamID\":null,\"aceEligible\":false,\"canRegisterForACE\":false,\"specialization\":null,\"supportForums\":true,\"textbooks\":\"\",\"inVideoQuizV2\":false,\"in_flexjoin\":0,\"honorCodeExtraText\":\"I will not post solutions or partial solutions to the programming assignments publicly (e.g., in the discussion forums or in public code repositories such as GitHub).\",\"honorCodeCustomTitle\":\"\",\"honorCodeCustomButton\":\"\",\"studentAccessDisabled\":0,\"disableQQs\":false}");
+  });
+  define('pages/spark/models/navbar.json', [], function(){
+      return JSON.parse("{\"items\":[{\"name\":\"Home\",\"icon\":\"home\",\"link_type\":\"circuit\",\"link_data\":\"class:index\"},{\"name\":\"Syllabus\",\"icon\":\"wiki\",\"link_type\":\"circuit\",\"link_data\":\"wiki\\\/view?page=syllabus\"},{\"name\":\"Schedule\",\"icon\":\"wiki\",\"link_type\":\"circuit\",\"link_data\":\"wiki\\\/view?page=schedule\"},{\"name\":\"\",\"icon\":\"\",\"link_type\":\"circuit\",\"link_data\":\"\"},{\"name\":\"Lectures\",\"icon\":\"lecture\",\"link_type\":\"circuit\",\"link_data\":\"lecture:index\"},{\"name\":\"Exercises\",\"icon\":\"quiz\",\"link_type\":\"circuit\",\"link_data\":\"quiz:index\"},{\"name\":\"Programming Assignments\",\"icon\":\"assignment\",\"link_type\":\"circuit\",\"link_data\":\"assignment:index\"},{\"name\":\"Job Interview Questions\",\"icon\":\"quiz\",\"link_type\":\"circuit\",\"link_data\":\"quiz:index?quiz_type=homework\"},{\"name\":\"\",\"icon\":\"\",\"link_type\":\"circuit\",\"link_data\":\"\"},{\"name\":\"Discussion Forums\",\"icon\":\"forum\",\"link_type\":\"circuit\",\"link_data\":\"forum:index\"},{\"name\":\"Google+ Hangouts\",\"icon\":\"\",\"link_type\":\"wiki\",\"link_data\":\"ScheduleGoogleHangouts\"},{\"name\":\"Errata\",\"icon\":\"\",\"link_type\":\"circuit\",\"link_data\":\"wiki\\\/view?page=errata\"},{\"name\":\"Surveys\",\"icon\":\"\",\"link_type\":\"circuit\",\"link_data\":\"quiz:index?quiz_type=survey\"},{\"name\":\"\",\"icon\":\"\",\"link_type\":\"circuit\",\"link_data\":\"\"},{\"name\":\"Booksite\",\"icon\":\"wiki\",\"link_type\":\"window_link\",\"link_data\":\"http:\\\/\\\/algs4.cs.princeton.edu\"}]}");
+  });
+</script><script>var coursera_enable_new_help_center = true;
+</script><div class="hide confirm-navigation modal"><div class="modal-header"><h3>Confirm Navigation</h3></div><div class="modal-body"><div class="confirm-navigation-message"></div><div>Are you sure you want to leave this page?</div></div><div class="modal-footer"><button data-modal-close="data-modal-close" class="btn confirm-navigation-stay">Stay on this Page</button><button data-modal-close="data-modal-close" class="btn btn-danger confirm-navigation-leave">Leave this Page</button></div></div><div class="coursera-async-message" style="display: none;"></div></body></html>

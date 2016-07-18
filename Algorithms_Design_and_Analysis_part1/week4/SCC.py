@@ -114,28 +114,28 @@ def main():
     scc = DFS_loop_2(graph)
     print('Test 1')
     print('My answer:\t', sorted(scc, reverse=True) + [0] * (5 - len(scc)))
-    print('Correct answer: 3, 3, 3, 0, 0\n')
+    print('Correct answer:\t [3, 3, 3, 0, 0]\n')
 
     graph, graph_rev = load_data('test2.txt')
     f_t = DFS_loop(graph_rev)
     scc = DFS_loop_2(graph)
     print('Test 2')
     print('My answer:\t', sorted(scc, reverse=True) + [0] * (5 - len(scc)))
-    print('Correct answer: 3, 3, 2, 0, 0\n')
+    print('Correct answer:\t [3, 3, 2, 0, 0]\n')
 
     graph, graph_rev = load_data('test3.txt')
     f_t = DFS_loop(graph_rev)
     scc = DFS_loop_2(graph)
     print('Test 3')
     print('My answer:\t', sorted(scc, reverse=True) + [0] * (5 - len(scc)))
-    print('Correct answer: 3, 3, 1, 1, 0\n')
+    print('Correct answer:\t [3, 3, 1, 1, 0]\n')
 
     graph, graph_rev = load_data('test4.txt')
     f_t = DFS_loop(graph_rev)
     scc = DFS_loop_2(graph)
     print('Test 4')
     print('My answer:\t', sorted(scc, reverse=True) + [0] * (5 - len(scc)))
-    print('Correct answer: 7, 1, 0, 0, 0\n')
+    print('Correct answer:\t [7, 1, 0, 0, 0]\n')
 
     # final answer
     graph, graph_rev = load_data('SCC.txt')

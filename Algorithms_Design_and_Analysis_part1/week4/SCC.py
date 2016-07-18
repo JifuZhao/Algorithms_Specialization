@@ -55,7 +55,6 @@ def DFS_loop(G):
 
     n = len(G.keys())
     t = 0
-    s = None
     explored = [0] * n
     f_t = dict()
 
@@ -86,7 +85,6 @@ def DFS_loop_2(G):
     global f_t
 
     n = len(G.keys())
-    s = None
     explored = [0] * n
     scc = []
 

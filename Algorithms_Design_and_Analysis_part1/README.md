@@ -2,7 +2,6 @@
 
 ### Week 1:	
 I. Introduction
-
     - Integer Multiplication, Karatsuba Multiplication, Merge Sort
     
 II. Asymptotic Analysis

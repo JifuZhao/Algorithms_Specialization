@@ -1,4 +1,5 @@
 ## Algorithms: Design and Analysis, Part 2
+July 2016, by Professor Tim Roughgarden, Stanford University
 
 ###Week 1:
 * I. Two Motivating Applications
@@ -52,7 +53,7 @@
 * XIX. Local Search Algorithms
 	- The Maximum Cut Problem, the 2-SAT Problem
     - Random Walks on a Line, Analysis of Papadimitriou’s Algorithm
-    
+    c
 * XX. The Wider World of Algorithms
 	- Stable Matching, Flows, Braess’s Paradox, Linear Programming
 

@@ -1,7 +1,7 @@
 ## Algorithms: Design and Analysis, Part 1
 
 ### Week 1:	
-I. Introduction
+I. Introduction </br>
     - Integer Multiplication, Karatsuba Multiplication, Merge Sort
     
 II. Asymptotic Analysis

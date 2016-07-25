@@ -1,74 +1,71 @@
 ## Algorithms: Design and Analysis, Part 1
 
 ### Week 1:	
-I. Introduction </br>
-    - Integer Multiplication, Karatsuba Multiplication, Merge Sort
+* I. Introduction
+- Integer Multiplication, Karatsuba Multiplication, Merge Sort
     
-II. Asymptotic Analysis
-
-	- Big-Oh Notation, Big Omega, Big Theta
+* II. Asymptotic Analysis
+- Big-Oh Notation, Big Omega, Big Theta
 	
-III. Divide & Conquer Algorithms
-
-	- Counting Inversions, Strassen’s Matrix Multiplication, Closest Pair
+* III. Divide & Conquer Algorithms
+- Counting Inversions, Strassen’s Matrix Multiplication, Closest Pair
 	
 ### Week 2:	
-IV. The Master Method
+* IV. The Master Method
 
-V. QuickSort – Algorithm
-
-	- Partitioning, Pivot
+* V. QuickSort – Algorithm
+- Partitioning, Pivot
 	
-VI. QuickSort - Analysis
+* VI. QuickSort - Analysis
 
-VII. Probability Review
+* VII. Probability Review
 
 ### Week 3:	
-VIII. Linear-Time Selection
-
-	- Randomized Selection, Deterministic Selection
+* VIII. Linear-Time Selection
+- Randomized Selection, Deterministic Selection
 	
-IX. Graphs and the Contraction Algorithm
-
-	- Minimum Cuts, Graph Representation, Random Contraction Algorithm
+* IX. Graphs and the Contraction Algorithm
+- Minimum Cuts, Graph Representation, Random Contraction Algorithm
 	
 ### Week 4:	
-X. Graph Search and Connectivity
-
-	- Breadth-First Search (BFS), Shortest Paths, Undirected Connectivity
-	
-	- Depth-First Search (DFS), Topological Sort, Strong Components (SCCs)
+* X. Graph Search and Connectivity
+- Breadth-First Search (BFS), Shortest Paths, Undirected Connectivity
+- Depth-First Search (DFS), Topological Sort, Strong Components (SCCs)
 	
 ### Week 5:	
-XI. Dijkstra’s Shortest-Path Algorithm
+* XI. Dijkstra’s Shortest-Path Algorithm
 
-XII. Heaps
-
-	- Data Structure, Heaps
+* XII. Heaps
+- Data Structure, Heaps
 	
-XIII. Balanced Binary Search Trees
-
-	- Binary Search Trees, Red-Black Trees, Rotations, Insertion
+* XIII. Balanced Binary Search Trees
+- Binary Search Trees, Red-Black Trees, Rotations, Insertion
 	
 ### Week 6:	
-XIV. Hashing: the Basics
+* XIV. Hashing: the Basics
 
-XV. Universal Hashing
-
-	- Pathological Data Sets, Universal Hashing
+* XV. Universal Hashing
+- Pathological Data Sets, Universal Hashing
 	
-XVI. Bloom Filters
+* XVI. Bloom Filters
 
 ## Assignment
 
-Assignment 1: MergeSort
+* Assignment 1: 
+- MergeSort
 
-Assignment 2: QuickSort
+* Assignment 2: 
+- QuickSort
 
-Assignment 3: Randomized Contraction Algorithm for Minimum Cuts
+* Assignment 3: 
+- Randomized Contraction Algorithm for Minimum Cuts
 
-Assignment 4: Strongly Connected Components
+* Assignment 4: 
+- Strongly Connected Components
 
-Assignment 5: Dijkstra's Shortest Path Algorithm
+* Assignment 5: 
+- Dijkstra's Shortest Path Algorithm
 
-Assignment 6: Hash Tables for Two Sum &  Median Maintenance
+* Assignment 6: 
+- Hash Tables for Two Sum
+- Median Maintenance

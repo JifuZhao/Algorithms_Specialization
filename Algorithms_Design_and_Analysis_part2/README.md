@@ -43,7 +43,7 @@
 * XVI. NP-Complete Problems
 
 * XVII. Faster Exact Algorithms for NP-Complete Problems
-		- The Vertex Cover Problem, the Traveling Salesman Problem
+	- The Vertex Cover Problem, the Traveling Salesman Problem
 
 ## Week 6:
 * XVIII. Approximation Algorithms for NP-Complete Problems
@@ -62,10 +62,10 @@
     - Prim's Minimum Spanning Tree (MST) Algorithm
 
 * Assignment 2:
-    -K-Clustering Algorithm
+    - K-Clustering Algorithm
 
 * Assignment 3:
-    -Knapsack Algorithm
+    - Knapsack Algorithm
 
 * Assignment 4:
 

@@ -6,6 +6,7 @@ __author__      = "Jifu Zhao"
 __email__       = "jzhao59@illinois.edu"
 __date__        = "07/29/2016"
 """
+
 import time
 t0 = time.time()
 
@@ -29,19 +30,17 @@ def Floyd_Warshall(num_vertices, graph):
     """
     infinity = 100000
 
-    # initialize the 3D array A
-    A = [[[0 for k in range(num_vertices + 1)]
-          for j in range(num_vertices)] for i in range(num_vertices)]
-    print('Create A, done !')
+    # initialize the dict A
+    A = dict()
 
     for i in range(1, num_vertices + 1):
         for j in range(1, num_vertices + 1):
             if i == j:
-                A[i - 1][j - 1][0] = 0
+                A[(i, j, 0)] = 0
             elif (i, j) in graph:
-                A[i - 1][j - 1][0] = graph[(i, j)]
+                A[(i, j, 0)] = graph[(i, j)]
             else:
-                A[i - 1][j - 1][0] = infinity
+                A[(i, j, 0)] = infinity
     print('Initializing A, done !')
     del graph  # delete graph to save memory
 
@@ -49,25 +48,36 @@ def Floyd_Warshall(num_vertices, graph):
     for k in range(1, num_vertices + 1):
         if k % 50 == 0:
             print('Current k is: ', k)
-        for i in range(num_vertices):
-            for j in range(num_vertices):
-                case1 = A[i][j][k - 1]
-                case2 = A[i][k - 1][k - 1] + A[k - 1][j][k - 1]
+        for i in range(1, num_vertices + 1):
+            for j in range(1, num_vertices + 1):
+                case1 = A[(i, j, k - 1)]
+                case2 = A[(i, k, k - 1)] + A[(k, j, k - 1)]
                 if case1 < case2:
-                    A[i][j][k] = case1
+                    A[(i, j, k)] = case1
                 else:
-                    A[i][j][k] = case2
+                    A[(i, j, k)] = case2
 
-    for i in range(num_vertices):
-        if A[i][i][num_vertices] < 0:
+                if k >= 2:
+                    del A[(i, j, k - 2)]  # delete useless values to save memory
+        # if k > 2:
+        #     # release memory
+        #     for i in range(1, num_vertices + 1):
+        #         for j in range(1, num_vertices + 1):
+        #             # delete useless values to save memory
+        #             del A[(i, j, k - 2)]
+    print('Finish loop !')
+
+    for i in range(1, num_vertices + 1):
+        if A[(i, i, num_vertices)] < 0:
             return "Negative cycle found"
+
     print('Pass negative cycle check !')
 
     minimum = infinity
-    for i in range(num_vertices):
-        for j in range(num_vertices):
-            if A[i][j][num_vertices] < minimum:
-                minimum = A[i][j][num_vertices]
+    for i in range(1, num_vertices + 1):
+        for j in range(1, num_vertices + 1):
+            if A[(i, j, num_vertices)] < minimum:
+                minimum = A[(i, j, num_vertices)]
 
     return minimum
 
@@ -86,17 +96,17 @@ def Floyd_Warshall(num_vertices, graph):
 # print('Result: ', Floyd_Warshall(num_vertices, graph))
 
 # Assignment
-print('Begin g1.txt ' + '.' * 10)
-num_vertices1, num_edges1, graph1 = read_graph('./g1.txt')
-print(Floyd_Warshall(num_vertices1, graph1))
-print('Time: ', time.time() - t0)
+# print('Begin g1.txt ' + '.' * 10)
+# num_vertices1, num_edges1, graph1 = read_graph('./g1.txt')
+# print(Floyd_Warshall(num_vertices1, graph1))
+# print('Time: ', time.time() - t0)
 
 # print('\n Begin g2.txt ' + '.' * 10)
 # num_vertices2, num_edges2, graph2 = read_graph('./g2.txt')
 # print(Floyd_Warshall(num_vertices2, graph2))
 # print('Time: ', time.time() - t0)
 
-# print('\n Begin g3.txt ' + '.' * 10)
-# num_vertices3, num_edges3, graph3 = read_graph('./g3.txt')
-# print(Floyd_Warshall(num_vertices3, graph3))
-# print('Time: ', time.time() - t0)
+print('\n Begin g3.txt ' + '.' * 10)
+num_vertices3, num_edges3, graph3 = read_graph('./g3.txt')
+print(Floyd_Warshall(num_vertices3, graph3))
+print('Time: ', time.time() - t0)

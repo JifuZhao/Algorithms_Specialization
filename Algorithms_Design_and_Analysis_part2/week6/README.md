@@ -9,4 +9,7 @@
 ### Kosaraju's Two-Pass Algorithm (reduced to SCC problem)
 * Kosaruju.py implements the Kosaraju's Two-Pass Algorithm to compute the strongly connected components (SCC)
 * The original 2-SAT problem reduces to SCC problem
-* Running time gets improved a lot
+* Have tested on the test file, but the running time on assignment file is still too long.
+* Can refer to [Online resource][Link]
+
+[Link]: https://github.com/andrewlee224/algorithms-part2/tree/master/week6

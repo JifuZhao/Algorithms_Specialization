@@ -4,11 +4,12 @@
 """
 __author__      = "Jifu Zhao"
 __email__       = "jzhao59@illinois.edu"
-__date__        = "08/01/2016"
+__date__        = "07/30/2016"
 """
 
 import numpy as np
 import time
+import copy
 
 t0 = time.time()
 
@@ -44,9 +45,8 @@ A[((1, ), 1)] = 0
 N = num_city
 # Dynamic Programming Algorithm for TSP
 for m in range(2, N + 1):
-    # print('Current m is: ', m)
-    # print(A)
-    old_keys = list(A.keys())
+    print('Current m is: ', m)
+    old_keys = copy.deepcopy(list(A.keys()))
     S = []  # create subset S
     for key in old_keys:
         old_set = key[0]
@@ -56,22 +56,22 @@ for m in range(2, N + 1):
         for i in range(old_set[-1] + 1, num_city + 1):
             new_set = old_set + (i,)
             S.append(new_set)
-    print('m =', m, '\tlen(S) =', len(S))
+    # print(old_keys)
+    # print(S)
+    print('m = ', m, len(S))
     for sub_S in S:
-        # A[(sub_S, 1)] = Inf
+        A[(sub_S, 1)] = Inf
         for j in sub_S[1:]:
-            if len(sub_S) == 2:
-                A[(sub_S, j)] = distance[sub_S[0] - 1, sub_S[1] - 1]
-                continue
             minimum = Inf
             for k in sub_S:
                 if k == j:
                     continue
-                elif k == 1:
-                    continue
                 else:
-                    # print(sub_S, j, k)
                     sub_key = tuple(x for x in sub_S if x != j)
+                    # if k == 1:
+                    #     temp_value = Inf
+                    # else:
+                    #     temp_value = A[(sub_key, k)] + distance[k - 1, j - 1]
                     temp_value = A[(sub_key, k)] + distance[k - 1, j - 1]
                     if temp_value < minimum:
                         minimum = temp_value
@@ -86,5 +86,5 @@ for j in range(2, N + 1):
         minimum = temp_value
         temp_j = j
 
-print('Minimum is: ', minimum)
-print('Time usage: ', time.time() - t0)
+print(minimum, j)
+print('Time: ', time.time() - t0)

@@ -9,7 +9,6 @@ __date__        = "07/17/2016"
 
 import sys
 import threading
-import time
 
 def load_data(name):
     # use dictinary to store the data
@@ -139,17 +138,14 @@ def main():
     print('Correct answer:\t [7, 1, 0, 0, 0]\n')
 
     # final answer
-    t0 = time.time()
     graph, graph_rev = load_data('SCC.txt')
     f_t = DFS_loop(graph_rev)
     scc = DFS_loop_2(graph)
     print('*' * 40)
     print('Final Answer')
     print('My answer:\t', sorted(scc, reverse=True)[:5])
-    print('Time: ', time.time() - t0)
 
 if __name__ == '__main__':
-
     threading.stack_size(67108864)
     sys.setrecursionlimit(2 ** 20)
     thread = threading.Thread(target=main)

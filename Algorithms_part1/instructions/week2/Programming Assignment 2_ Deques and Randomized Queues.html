@@ -34,7 +34,7 @@ Create a generic data type <tt>Deque</tt> that implements the following API:
 <b>   public Item removeFirst()                </b><font color="gray">// remove and return the item from the front</font>
 <b>   public Item removeLast()                 </b><font color="gray">// remove and return the item from the end</font>
 <b>   public Iterator&lt;Item&gt; iterator()         </b><font color="gray">// return an iterator over items in order from front to end</font>
-<b>   public static void main(String[] args)   </b><font color="gray">// unit testing</font>
+<b>   public static void main(String[] args)   </b><font color="gray">// unit testing (optional)</font>
 <b>}</b>
 </pre>
 </blockquote>
@@ -77,7 +77,7 @@ that implements the following API:
 <b>   public Item dequeue()                    </b><font color="gray">// remove and return a random item</font>
 <b>   public Item sample()                     </b><font color="gray">// return (but do not remove) a random item</font>
 <b>   public Iterator&lt;Item&gt; iterator()         </b><font color="gray">// return an independent iterator over items in random order</font>
-<b>   public static void main(String[] args)   </b><font color="gray">// unit testing</font>
+<b>   public static void main(String[] args)   </b><font color="gray">// unit testing (optional)</font>
 <b>}</b>
 </pre>  
 </blockquote>
@@ -115,40 +115,42 @@ linear amount of extra memory per iterator.
 
 
 </p><p>
-<b>Subset client.</b>
+<b>Permutation client.</b>
 
-Write a client program <tt>Subset.java</tt> that takes a
+Write a client program <tt>Permutation.java</tt> that takes a
 command-line integer <em>k</em>; reads in a sequence of
-<em>N</em> strings from standard input using <tt>StdIn.readString()</tt>;
-and prints out exactly <em>k</em> of them, uniformly at random.
-Each item from the sequence can be printed out at most once.
+strings from standard input using <tt>StdIn.readString()</tt>;
+and prints exactly <em>k</em> of them, uniformly at random.
+Print each item from the sequence at most once.
 You may assume that 0 ≤ <em>k</em> ≤ <em>n</em>, where <em>n</em>
 is  the number of string on standard input.
 
 </p><blockquote>
-<pre>% <b>echo A B C D E F G H I | java Subset 3</b>       % <b>echo AA BB BB BB BB BB CC CC | java Subset 8</b>
-C                                              BB
-G                                              AA
-A                                              BB
-                                               CC
-% <b>echo A B C D E F G H I | java Subset 3</b>       BB
-E                                              BB
-F                                              CC
-G                                              BB
+<pre>% <b>more distinct.txt</b>                        % <b>more duplicates.txt</b>
+A B C D E F G H I                          AA BB BB BB BB BB CC CC
+
+% <b>java Permutation 3 &lt; distinct.txt</b>       % <b>java Permutation 8 &lt; duplicates.txt</b>
+C                                          BB
+G                                          AA
+A                                          BB
+                                           CC
+% <b>java Permutation 3 &lt; distinct.txt</b>        BB
+E                                          BB
+F                                          CC
+G                                          BB
 </pre>
 </blockquote>
 
 
-The running time of <tt>Subset</tt> must be linear in the size of the input.
+The running time of <tt>Permutation</tt> must be linear in the size of the input.
 You may use only a constant amount of memory plus either
-one <tt>Deque</tt> or <tt>RandomizedQueue</tt> object of maximum size at most <em>n</em>,
-where <em>n</em> is the number of strings on standard input.
+one <tt>Deque</tt> or <tt>RandomizedQueue</tt> object of maximum size at most <em>n</em>.
 (For an extra challenge, use only one <tt>Deque</tt> or <tt>RandomizedQueue</tt> object of maximum
 size at most <em>k</em>.)
-It should have the following API.
+It must have the following API:
 
 <blockquote>
-<pre><b>public class Subset {</b>
+<pre><b>public class Permutation {</b>
 <b>   public static void main(String[] args)</b>
 <b>}</b>
 </pre>
@@ -157,15 +159,15 @@ It should have the following API.
 
 <p>
 <b>Deliverables.</b>
-Submit only <tt>Deque.java</tt>, <tt>RandomizedQueue.java</tt>, and <tt>Subset.java</tt>.
+Submit only <tt>Deque.java</tt>, <tt>RandomizedQueue.java</tt>, and <tt>Permutation.java</tt>.
 We will supply <tt>algs4.jar</tt>.
-Your submission not call library functions except those in
+Do not call library functions except those in
 <a href="http://algs4.cs.princeton.edu/code/javadoc/edu/princeton/cs/algs4/StdIn.html"><tt>StdIn</tt></a>,
 <a href="http://algs4.cs.princeton.edu/code/javadoc/edu/princeton/cs/algs4/StdOut.html"><tt>StdOut</tt></a>,
 <a href="http://algs4.cs.princeton.edu/code/javadoc/edu/princeton/cs/algs4/StdRandom.html"><tt>StdRandom</tt></a>,
 <tt>java.lang</tt>, <tt>java.util.Iterator</tt>, and
 <tt>java.util.NoSuchElementException</tt>.
-In particular, you may not use either <tt>java.util.LinkedList</tt> or <tt>java.util.ArrayList</tt>.
+In particular, do not use either <tt>java.util.LinkedList</tt> or <tt>java.util.ArrayList</tt>.
 
 
 

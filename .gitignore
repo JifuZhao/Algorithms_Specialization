@@ -6,7 +6,7 @@
 
 # Mac System
 .DS_Store
-.recommenders/*
+.recommenders
 
 # eclipse specific git ignore
 *.pydevproject

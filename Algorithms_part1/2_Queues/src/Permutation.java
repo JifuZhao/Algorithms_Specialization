@@ -3,7 +3,7 @@
  *  Written:       03/21/2017
  *  
  *  Programming assignment for Princeton Algorithms Part I
- *  Percolation Problem
+ *  Queue Problem
  *----------------------------------------------------------------*/
 
 import edu.princeton.cs.algs4.StdIn;

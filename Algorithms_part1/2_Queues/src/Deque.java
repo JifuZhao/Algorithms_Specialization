@@ -3,7 +3,7 @@
  *  Written:       03/21/2017
  *  
  *  Programming assignment for Princeton Algorithms Part I
- *  Percolation Problem
+ *  Queue Problem
  *----------------------------------------------------------------*/
 
 import java.util.Iterator;

@@ -3,7 +3,7 @@
  *  Written:       03/22/2017
  *  
  *  Programming assignment for Princeton Algorithms Part I
- *  Percolation Problem
+ *  Collinear Problem
  *----------------------------------------------------------------*/
 
 import edu.princeton.cs.algs4.In;

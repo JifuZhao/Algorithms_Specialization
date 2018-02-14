@@ -1,6 +1,6 @@
-# Algorithms_Specialization
+# Coursera
 
-- Repository for Algorithms Specialization by Stanford University and Princeton University
+- Repository of a series interesting courses from Coursera.
 
 
 # 1. Coursera: Algorithms: Design and Analysis, [Part I][link1] and [Part II][link2]
